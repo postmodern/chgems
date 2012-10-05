@@ -13,6 +13,11 @@ function chgems()
 	[[ -z "$root" ]]    && root="$PWD"
 	[[ -z "$command" ]] && command="$SHELL"
 
+	if [[ ! -d "$root" ]]; then
+		echo "chgems: cannot use $root as a gem dir: No such directory"
+		return 1
+	fi
+
 	local ruby_engine
 	local ruby_version
 	local gem_root
