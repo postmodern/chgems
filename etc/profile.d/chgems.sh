@@ -16,19 +16,21 @@ function chgems()
 	local ruby_engine
 	local ruby_version
 	local gem_root
+	local gem_home
 
 	eval `ruby - <<EOF
 require 'rubygems'
 puts "ruby_engine=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'}"
 puts "ruby_version=#{RUBY_VERSION}"
 puts "gem_root=\"#{Gem.default_dir}\""
+puts "gem_home=\"#{Gem.user_dir}\""
 EOF`
 
-	local gem_home="$root/.gem/$ruby_engine/$ruby_version"
+	local gem_dir="$root/.gem/$ruby_engine/$ruby_version"
 
-	env PATH="$gem_home/bin:$PATH" \
-	    GEM_HOME="$gem_home" \
-	    GEM_PATH="$gem_home:$gem_root" \
+	env PATH="$gem_dir/bin:$PATH" \
+	    GEM_HOME="$gem_dir" \
+	    GEM_PATH="$gem_dir:$gem_home:$gem_root" \
 	    PS1="[$(basename $root)] $PS1" \
 	    $command
 }
