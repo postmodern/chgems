@@ -71,7 +71,7 @@ Cleaning up a `chgems` project:
 ## Alternatives
 
 * [gs](https://github.com/inkel/gs#readme)
-* [omg](http://blog.zenspider.com/blog/2012/09/ohmygems.html)
+* [ohmygems](http://blog.zenspider.com/blog/2012/09/ohmygems.html)
 
 [rbenv]: https://github.com/sstephenson/rbenv#readme
 [rbfu]: https://github.com/hmans/rbfu#readme
