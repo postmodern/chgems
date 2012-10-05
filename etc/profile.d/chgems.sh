@@ -39,5 +39,5 @@ EOF`
 	    GEM_PATH="$gem_dir:$gem_home:$gem_root" \
 	    PS1="$(basename $root)> $PS1" \
 	    $command
-	cd -
+	cd $OLDPWD
 }
