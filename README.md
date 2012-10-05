@@ -5,6 +5,8 @@ Like `chroot` for RubyGems.
 ## Features
 
 * Correctly sets `$PATH`, `$GEM_HOME` and `$GEM_PATH`.
+* Defaults `$GEM_HOME` to `$PWD/.gem/$ruby/$version`, to make clean up as
+  simple as `rm -rf project`.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
 
@@ -60,6 +62,10 @@ with:
 `chgems` into a directory, run a command and return:
 
     $ chgems ~/project rspec
+
+Cleaning up a `chgems` project:
+
+    $ rm -rf project
 
 ## Alternatives
 
