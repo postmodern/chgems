@@ -9,6 +9,7 @@ Like `chroot` for RubyGems.
   simple as `rm -rf project`.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
+* Plays nicely with [rbenv], [rbfu] and [chruby].
 
 ## Install
 
@@ -71,6 +72,10 @@ Cleaning up a `chgems` project:
 
 * [gs](https://github.com/inkel/gs#readme)
 * [omg](http://blog.zenspider.com/blog/2012/09/ohmygems.html)
+
+[rbenv]: https://github.com/sstephenson/rbenv#readme
+[rbfu]: https://github.com/hmans/rbfu#readme
+[chruby]: https://github.com/postmodern/chruby#readme
 
 [bash]: http://www.gnu.org/software/bash/
 [zsh]: http://www.zsh.org/
