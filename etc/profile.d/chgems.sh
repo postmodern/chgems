@@ -10,7 +10,10 @@ function chgems()
 	local root=$1
 	local command=$2
 
-	[[ -z "$root" ]]    && root="$PWD"
+	if [[ -n "$root" ]]; then root=$(readlink -f $root)
+	else			  root="$PWD"
+	fi
+
 	[[ -z "$command" ]] && command="$SHELL"
 
 	if [[ ! -d "$root" ]]; then
