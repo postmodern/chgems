@@ -17,7 +17,7 @@ function chgems()
 	[[ -z "$command" ]] && command="$SHELL"
 
 	if [[ ! -d "$root" ]]; then
-		echo "chgems: cannot use $root as a gem dir: No such directory"
+		echo "chgems: cannot use $root as a gem dir: No such directory" >&2
 		return 1
 	fi
 
