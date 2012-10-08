@@ -1,3 +1,12 @@
+### 0.1.3 / 2012-10-07
+
+* Added unit-tests using [shunit2](https://code.google.com/p/shunit2/).
+* Added support for [zsh].
+* Print errors to STDERR.
+* Correctly pass environment variables to the sub-shell / command.
+* Run commands in a sub-shell, otherwise exec a fresh `$SHELL`.
+* Ensure the return value of the sub-shell / command is returned.
+
 ### 0.1.2 / 2012-10-05
 
 * Check if the directory passed to `chgems` exists.
@@ -13,3 +22,4 @@
 
 * Initial release.
 
+[zsh]: http://www.zsh.org/
