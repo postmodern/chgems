@@ -35,6 +35,7 @@ puts "gem_home=\"#{Gem.user_dir}\""
 EOF`
 
 	local gem_dir="$root/.gem/$ruby_engine/$ruby_version"
+	local retval
 
 	cd $root/
 	eval 'PATH="$gem_dir/bin:$PATH"' \
@@ -42,5 +43,8 @@ EOF`
 	     'GEM_PATH="$gem_dir:$gem_home:$gem_root"' \
 	     'PS1="$(basename $root)> $PS1"' \
 	     $command
+	retval=$?
+
 	cd $OLDPWD
+	return $retval
 }
