@@ -37,7 +37,7 @@ with:
 
     $ cd ~/project
     $ chgems
-    [project] $ gem env
+    project> $ gem env
     RubyGems Environment:
       - RUBYGEMS VERSION: 1.8.24
       - RUBY VERSION: 1.9.3 (2012-04-20 patchlevel 194) [x86_64-linux]
