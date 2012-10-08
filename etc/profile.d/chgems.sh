@@ -41,8 +41,8 @@ EOF`
 		export GEM_PATH="$gem_dir:$gem_home:$gem_root"
 		export PS1="$(basename "$root")> $PS1"
 
-		if [[ ${#command[@]} -gt 0 ]]; then eval $command
-		else                                exec $SHELL
+		if [[ -n "${command[@]}" ]]; then eval $command
+		else                              exec $SHELL
 		fi
 	)
 }
