@@ -89,7 +89,6 @@ function test_chgems_GEM_PATH()
 function test_chgems_PS1()
 {
 	local expected="$TEST_NAME> $PS1"
-
 	local new_ps1=$(chgems "$TEST_DIR" 'echo -n $PS1')
 
 	assertEquals "did not prepend the gem directory name to PS1" \
