@@ -12,6 +12,6 @@ TEST_DIR="$PWD/test"
 TEST_NAME=$(basename $TEST_DIR)
 TEST_GEM_DIR="$TEST_DIR/.gem/$TEST_RUBY_ENGINE/$TEST_RUBY_VERSION"
 
-PS1="test$ "
+PS1="test$"
 
 . ./etc/profile.d/chgems.sh
