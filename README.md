@@ -10,6 +10,7 @@ Like `chroot` for RubyGems.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
 * Plays nicely with [rbenv], [rbfu] and [chruby].
+* Supports [bash] and [zsh].
 
 ## Install
 
