@@ -77,6 +77,10 @@ Cleaning up a `chgems` project:
 * [gs](https://github.com/inkel/gs#readme)
 * [ohmygems](http://blog.zenspider.com/blog/2012/09/ohmygems.html)
 
+## Credits
+
+* [mpapis](https://github.com/mpapis) for reviewing the code.
+
 [rbenv]: https://github.com/sstephenson/rbenv#readme
 [rbfu]: https://github.com/hmans/rbfu#readme
 [chruby]: https://github.com/postmodern/chruby#readme
