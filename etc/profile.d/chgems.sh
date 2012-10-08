@@ -2,7 +2,7 @@ function chgems()
 {
 	case "$1" in
 		-h|--help)
-			echo "usage: chgems [GEM_HOME [COMMAND]]"
+			echo "usage: chgems [ROOT [COMMAND [ARGS]...]]"
 			return
 			;;
 	esac
