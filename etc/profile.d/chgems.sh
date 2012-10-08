@@ -39,7 +39,10 @@ EOF`
 
 	cd $root/
 
-	PATH="$gem_dir/bin:$PATH" GEM_HOME="$gem_dir" GEM_PATH="$gem_dir:$gem_home:$gem_root" PS1="$(basename $root)> $PS1" eval $command
+	PATH="$gem_dir/bin:$PATH" \
+	GEM_HOME="$gem_dir" \
+	GEM_PATH="$gem_dir:$gem_home:$gem_root" \
+	PS1="$(basename "$root")> $PS1" eval $command
 	retval=$?
 
 	cd $OLDPWD
