@@ -7,14 +7,12 @@ function chgems()
 			;;
 	esac
 
-	local root=$1
-	local command=$2
+	local root=$1 && shift
+	local command=$@
 
 	if [[ -n "$root" ]]; then root=$(readlink -f $root)
 	else			  root="$PWD"
 	fi
-
-	[[ -z "$command" ]] && command="$SHELL"
 
 	if [[ ! -d "$root" ]]; then
 		echo "chgems: cannot use $root as a gem dir: No such directory" >&2
@@ -35,16 +33,16 @@ puts "gem_home=\"#{Gem.user_dir}\""
 EOF`
 
 	local gem_dir="$root/.gem/$ruby_engine/$ruby_version"
-	local retval
 
-	cd $root/
+	(
+		cd "$root"
+		export PATH="$gem_dir/bin:$PATH"
+		export GEM_HOME="$gem_dir"
+		export GEM_PATH="$gem_dir:$gem_home:$gem_root"
+		export PS1="$(basename "$root")> $PS1"
 
-	PATH="$gem_dir/bin:$PATH" \
-	GEM_HOME="$gem_dir" \
-	GEM_PATH="$gem_dir:$gem_home:$gem_root" \
-	PS1="$(basename "$root")> $PS1" eval $command
-	retval=$?
-
-	cd $OLDPWD
-	return $retval
+		if [[ ${#command[@]} -gt 0 ]]; then eval $command
+		else                                exec $SHELL
+		fi
+	)
 }
