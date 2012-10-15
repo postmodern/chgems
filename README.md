@@ -49,8 +49,10 @@ with:
         - ruby
         - x86_64-linux
       - GEM PATHS:
-         - /home/halproject/.gem/ruby/1.9.3
+         - /home/hal/project/.gem/ruby/1.9.3
          - /home/hal/.gem/ruby/1.9.1
+         - /usr/share/gems
+         - /usr/local/share/gems
       - GEM CONFIGURATION:
          - :update_sources => true
          - :verbose => true
