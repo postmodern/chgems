@@ -4,7 +4,8 @@ Like `chroot` for RubyGems.
 
 ## Features
 
-* Correctly sets `$PATH`, `$GEM_HOME` and `$GEM_PATH`.
+* Sets `$GEM_HOME`.
+* Preserves the current `$PATH` and `$GEM_PATH`.
 * Defaults `$GEM_HOME` to `$PWD/.gem/$ruby/$version`, to make clean up as
   simple as `rm -rf project`.
 * Runs a sub-shell or another command.
