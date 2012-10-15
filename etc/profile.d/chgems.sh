@@ -21,15 +21,13 @@ function chgems()
 
 	local ruby_engine
 	local ruby_version
-	local gem_root
-	local gem_home
+	local gem_path
 
 	eval `ruby - <<EOF
 require 'rubygems'
 puts "ruby_engine=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'}"
 puts "ruby_version=#{RUBY_VERSION}"
-puts "gem_root=\"#{Gem.default_dir}\""
-puts "gem_home=\"#{Gem.user_dir}\""
+puts "gem_path=\"#{Gem.path.join(':')}\""
 EOF`
 
 	local gem_dir="$root/.gem/$ruby_engine/$ruby_version"
@@ -38,7 +36,7 @@ EOF`
 		cd "$root"
 		export PATH="$gem_dir/bin:$PATH"
 		export GEM_HOME="$gem_dir"
-		export GEM_PATH="$gem_dir:$gem_home:$gem_root"
+		export GEM_PATH="$gem_dir:$gem_path"
 		export PS1="$(basename "$root")> $PS1"
 
 		if [[ -n "${command[@]}" ]]; then eval $command
