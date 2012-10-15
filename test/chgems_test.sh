@@ -79,7 +79,7 @@ function test_chgems_GEM_HOME()
 
 function test_chgems_GEM_PATH()
 {
-	local expected="$TEST_GEM_DIR:$TEST_GEM_HOME:$TEST_GEM_ROOT"
+	local expected="$TEST_GEM_DIR:$TEST_GEM_PATH"
 	local new_gem_path=$(chgems "$TEST_DIR" 'echo -n $GEM_PATH')
 
 	assertEquals "did not prepend the gem directory to GEM_PATH" \
