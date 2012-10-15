@@ -1,3 +1,7 @@
+### 0.1.4 / 2012-10-14
+
+* Preserve the current `$GEM_PATH` by calling `Gem.path`.
+
 ### 0.1.3 / 2012-10-07
 
 * Added unit-tests using [shunit2](https://code.google.com/p/shunit2/).
