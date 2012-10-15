@@ -17,9 +17,9 @@ Like `chroot` for RubyGems.
 
 ## Install
 
-    wget http://cloud.github.com/downloads/postmodern/chgems/chgems-0.1.3.tar.gz
-    tar -xjvf chgems-0.1.3.tar.gz
-    cd chgems-0.1.3/
+    wget http://cloud.github.com/downloads/postmodern/chgems/chgems-0.1.4.tar.gz
+    tar -xjvf chgems-0.1.4.tar.gz
+    cd chgems-0.1.4/
     make install
     ln -s /usr/local/etc/profile.d/chgems.sh /etc/profile.d/
 
@@ -29,8 +29,8 @@ All releases are [PGP] signed for security. Instructions on how to import my
 PGP key can be found on my [blog][1]. To verify that a release was not tampered 
 with:
 
-    wget http://cloud.github.com/downloads/postmodern/chgem/chgems-0.1.3.tar.gz.asc
-    gpg --verify chgems-0.1.3.tar.gz.asc chgems-0.1.3.tar.gz
+    wget http://cloud.github.com/downloads/postmodern/chgem/chgems-0.1.4.tar.gz.asc
+    gpg --verify chgems-0.1.4.tar.gz.asc chgems-0.1.4.tar.gz
 
 ## Examples
 
