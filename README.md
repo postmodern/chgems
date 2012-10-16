@@ -21,7 +21,7 @@ Like `chroot` for RubyGems.
     tar -xjvf chgems-0.1.4.tar.gz
     cd chgems-0.1.4/
     make install
-    ln -s /usr/local/etc/profile.d/chgems.sh /etc/profile.d/
+    ln -s /usr/local/share/chgems/chgems.sh /share/chgems/
 
 ### PGP
 
