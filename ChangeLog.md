@@ -1,3 +1,7 @@
+### 0.2.0 / 2012-10-15
+
+* Install `chgems.sh` into `$PREFIX/share/chgems/`.
+
 ### 0.1.4 / 2012-10-14
 
 * Preserve the current `$GEM_PATH` by calling `Gem.path`.
