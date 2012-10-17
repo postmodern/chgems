@@ -7,7 +7,7 @@
 * Sets `$GEM_HOME`.
 * Preserves the current `$PATH` and `$GEM_PATH`.
 * Defaults `$GEM_HOME` to `$PWD/.gem/$ruby/$version`, to make clean up as
-  simple as `rm -rf project`.
+  simple as `rm -rf project/`.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
 * Plays nicely with [rbenv], [rbfu] and [chruby].
