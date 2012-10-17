@@ -46,7 +46,7 @@ install:
 	install -d $(DOC_DIR)
 	cp -r $(DOC_FILES) $(DOC_DIR)/ 2>/dev/null || true
 	cp -r $(EXTRA_DOC_FILES) $(DOC_DIR)/ 2>/dev/null || true
-	ln -s $(SHARE_DIR)/chgems.sh $(ETC_DIR)/profile.d/
+	ln -sf $(SHARE_DIR)/chgems.sh $(ETC_DIR)/profile.d/
 
 uninstall:
 	rm -f $(ETC_DIR)/profile.d/chgems.sh
