@@ -1,6 +1,6 @@
 # chgems
 
-Like `chroot` for RubyGems.
+`chroot` for RubyGems.
 
 ## Features
 
