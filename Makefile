@@ -12,6 +12,8 @@ PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
 SIG=$(PKG_DIR)/$(PKG_NAME).asc
 
 PREFIX=/usr/local
+ETC_DIR=/etc
+SHARE_DIR=$(PREFIX)/share/chgems
 DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
 
 pkg:
@@ -44,7 +46,9 @@ install:
 	install -d $(DOC_DIR)
 	cp -r $(DOC_FILES) $(DOC_DIR)/ 2>/dev/null || true
 	cp -r $(EXTRA_DOC_FILES) $(DOC_DIR)/ 2>/dev/null || true
+	ln -s $(SHARE_DIR)/chgems.sh $(ETC_DIR)/profile.d/
 
 uninstall:
+	rm -f $(ETC_DIR)/profile.d/chgems.sh
 	for file in `find $(INSTALL_DIRS) -type f 2>/dev/null`; do rm -f $(PREFIX)/$$file; done
 	rm -rf $(DOC_DIR)
