@@ -10,7 +10,7 @@
   gems as well as the project gems.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
-* Plays nicely with [rbenv], [rbfu] and [chruby].
+* Plays nicely with [chruby], [rbenv] and [rbfu].
 * Supports [bash] and [zsh].
 * Small (~50 LOC).
 * Has tests.
