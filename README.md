@@ -6,8 +6,8 @@
 
 * Sets `$GEM_HOME` to `$project/.gem/$ruby/$version`, isolating installed
   gems to the project directory.
-* Updates `$PATH` and `$GEM_PATH`, preserving access to previously installed
-  gems as well as the project gems.
+* Updates `$PATH` and `$GEM_PATH`, providing access to both project gems and
+  user / system installed gems.
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
 * Plays nicely with [chruby], [rbenv] and [rbfu].
