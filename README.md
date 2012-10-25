@@ -17,9 +17,9 @@
 
 ## Install
 
-    wget http://cloud.github.com/downloads/postmodern/chgems/chgems-0.2.0.tar.gz
-    tar -xjvf chgems-0.2.0.tar.gz
-    cd chgems-0.2.0/
+    wget http://cloud.github.com/downloads/postmodern/chgems/chgems-0.2.1.tar.gz
+    tar -xjvf chgems-0.2.1.tar.gz
+    cd chgems-0.2.1/
     make install
 
 ### PGP
@@ -28,8 +28,8 @@ All releases are [PGP] signed for security. Instructions on how to import my
 PGP key can be found on my [blog][1]. To verify that a release was not tampered 
 with:
 
-    wget http://cloud.github.com/downloads/postmodern/chgem/chgems-0.2.0.tar.gz.asc
-    gpg --verify chgems-0.2.0.tar.gz.asc chgems-0.2.0.tar.gz
+    wget http://cloud.github.com/downloads/postmodern/chgem/chgems-0.2.1.tar.gz.asc
+    gpg --verify chgems-0.2.1.tar.gz.asc chgems-0.2.1.tar.gz
 
 ### Homebrew
 
