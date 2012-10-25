@@ -1,3 +1,8 @@
+### 0.2.1 / 2012-10-24
+
+* Fixed `make install` to work on OS X.
+* Added a [homebrew] recipe.
+
 ### 0.2.0 / 2012-10-16
 
 * Install `chgems.sh` into `$PREFIX/share/chgems/`.
@@ -32,3 +37,4 @@
 * Initial release.
 
 [zsh]: http://www.zsh.org/
+[homebrew]: http://mxcl.github.com/homebrew/
