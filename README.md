@@ -31,6 +31,12 @@ with:
     wget http://cloud.github.com/downloads/postmodern/chgem/chgems-0.2.0.tar.gz.asc
     gpg --verify chgems-0.2.0.tar.gz.asc chgems-0.2.0.tar.gz
 
+### Homebrew
+
+chruby can also be installed with [homebrew]:
+
+    brew install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb
+
 ## Examples
 
 `chgems` into a project:
@@ -90,5 +96,6 @@ Cleaning up a `chgems` project:
 [bash]: http://www.gnu.org/software/bash/
 [zsh]: http://www.zsh.org/
 [PGP]: http://en.wikipedia.org/wiki/Pretty_Good_Privacy
+[homebrew]: http://mxcl.github.com/homebrew/
 
 [1]: http://postmodern.github.com/contact.html#pgp
