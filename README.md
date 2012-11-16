@@ -38,6 +38,22 @@ chruby can also be installed with [homebrew]:
 
     brew install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb
 
+## Configuration
+
+Add the following lines to your `~/.bashrc` or `~/.profile` file:
+
+    . /usr/local/share/chgems/chgems.sh
+
+### System Wide
+
+On systems with `/etc/profile.d/`, simply symlink in `chgems.sh`:
+
+    $ ln -sf /usr/local/share/chgems/chgems.sh /etc/profile.d/
+
+On systems without `/etc/profile.d/`, simply load `chgems.sh` in `/etc/profile`:
+
+    . /usr/local/share/chgems/chgems.sh
+
 ## Examples
 
 `chgems` into a project:
