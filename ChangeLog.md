@@ -1,3 +1,11 @@
+### 0.2.2 / 2012-11-15
+
+* Fixed `make install` to not automatically symlink chgems into
+  `/etc/profile.d/`:
+  * OS X does not have a `/etc/profile.d/`.
+  * Give users the choice between global or local installation.
+* Added a post-install message to the [homebrew] recipe.
+
 ### 0.2.1 / 2012-10-24
 
 * Fixed `make install` to work on OS X.
