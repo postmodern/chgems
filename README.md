@@ -34,7 +34,7 @@ with:
 
 ### Homebrew
 
-chruby can also be installed with [homebrew]:
+chgems can also be installed with [homebrew]:
 
     brew install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb
 
