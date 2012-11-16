@@ -13,4 +13,4 @@ TEST_GEM_DIR="$TEST_DIR/.gem/$TEST_RUBY_ENGINE/$TEST_RUBY_VERSION"
 
 PS1="test$"
 
-. ./etc/profile.d/chgems.sh
+. ./share/chgems/chgems.sh
