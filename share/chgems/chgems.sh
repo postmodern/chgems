@@ -7,11 +7,15 @@ function chgems()
 			;;
 	esac
 
-	local root=$1 && shift
-	local command=$@
+	local root
+	local command
 
-	if [[ -n "$root" ]]; then root=$(readlink -f $root)
-	else			  root="$PWD"
+	if [[ -n "$1" ]]; then
+		root=$(readlink -f "$1")
+		shift && command=$@
+	else
+		root="$PWD"
+		command=""
 	fi
 
 	if [[ ! -d "$root" ]]; then
