@@ -1,3 +1,8 @@
+### 0.2.3 / 2012-11-15
+
+* Fixed a warning under [zsh] when `shift` is called and `chgems` was called
+  without arguments.
+
 ### 0.2.2 / 2012-11-15
 
 * Fixed `make install` to not automatically symlink chgems into
