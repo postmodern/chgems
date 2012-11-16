@@ -2,9 +2,9 @@ require 'formula'
 
 class Chgems < Formula
 
-  url 'https://github.com/downloads/postmodern/chgems/chgems-0.2.1.tar.gz'
+  url 'https://github.com/downloads/postmodern/chgems/chgems-0.2.2.tar.gz'
   homepage 'https://github.com/postmodern/chgems#readme'
-  md5 'a2a87d44e1bc00c1ddfc0053e1908774'
+  md5 'fb4468b0e8c7b7fbc172df1902da4e30'
   head 'https://github.com/postmodern/chgems.git'
 
   def install
