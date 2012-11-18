@@ -12,7 +12,7 @@
 * Runs a sub-shell or another command.
 * Modifies the shell prompt, to remind the developer they are in a gems root.
 * Plays nicely with [chruby], [rbenv] and [rbfu].
-* Supports [bash], [zsh] and [dash].
+* Supports [bash] and [zsh].
 * Small (~50 LOC).
 * Has tests.
 
@@ -112,8 +112,6 @@ Cleaning up a `chgems` project:
 
 [bash]: http://www.gnu.org/software/bash/
 [zsh]: http://www.zsh.org/
-[dash]: http://gondor.apana.org.au/~herbert/dash/
-
 [PGP]: http://en.wikipedia.org/wiki/Pretty_Good_Privacy
 [homebrew]: http://mxcl.github.com/homebrew/
 
