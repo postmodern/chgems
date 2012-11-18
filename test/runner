@@ -12,6 +12,6 @@ for shell in ${SHELLS[@]}; do
 	log "Running tests under $shell ..."
 
 	for test in $(dirname $0)/*_test.sh; do
-		SHELL=$shell $shell -c $test
+		env SHELL=$shell $shell -c $test
 	done
 done
