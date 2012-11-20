@@ -12,7 +12,6 @@ PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
 SIG=$(PKG_DIR)/$(PKG_NAME).asc
 
 PREFIX=/usr/local
-ETC_DIR=/etc
 SHARE_DIR=$(PREFIX)/share/chgems
 DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
 
