@@ -1,4 +1,4 @@
-#!/usr/share/shunit2/shunit2
+#!/bin/sh
 
 . ./test/helper.sh
 
@@ -94,3 +94,5 @@ function test_chgems_PS1()
 	assertEquals "did not prepend the gem directory name to PS1" \
 		     "$expected" "$new_ps1"
 }
+
+SHUNIT_PARENT=$0 . /usr/share/shunit2/shunit2
