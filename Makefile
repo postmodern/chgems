@@ -1,5 +1,5 @@
 NAME=chgems
-VERSION=0.2.3
+VERSION=0.2.4
 
 FILES=$(shell git ls-files 2>/dev/null)
 INSTALL_DIRS=$(shell find etc lib bin sbin share -type d 2>/dev/null)
