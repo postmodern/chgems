@@ -1,3 +1,7 @@
+### 0.2.4 / 2012-11-19
+
+* Updated the Makefile to be compatible with the [dash] shell.
+
 ### 0.2.3 / 2012-11-15
 
 * Fixed a warning under [zsh] when `shift` is called and `chgems` was called
@@ -49,5 +53,7 @@
 
 * Initial release.
 
+[dash]: http://gondor.apana.org.au/~herbert/dash/
 [zsh]: http://www.zsh.org/
+
 [homebrew]: http://mxcl.github.com/homebrew/
