@@ -11,7 +11,7 @@ PKG_NAME=$(NAME)-$(VERSION)
 PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
 SIG=$(PKG_DIR)/$(PKG_NAME).asc
 
-PREFIX=/usr/local
+PREFIX?=/usr/local
 SHARE_DIR=$(PREFIX)/share/chgems
 DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
 
