@@ -1,10 +1,10 @@
 NAME=chgems
 VERSION=0.2.4
 
-FILES=$(shell git ls-files 2>/dev/null)
-INSTALL_DIRS=$(shell find etc lib bin sbin share -type d 2>/dev/null)
-INSTALL_FILES=$(shell find etc lib bin sbin share -type f 2>/dev/null)
-DOC_FILES=$(shell find *.md *.tt *.txt 2>/dev/null)
+DIRS=etc lib bin sbin share
+INSTALL_DIRS=`find $(DIRS) -type d 2>/dev/null`
+INSTALL_FILES=`find $(DIRS) -type f 2>/dev/null`
+DOC_FILES=*.md *.txt
 
 PKG_DIR=pkg
 PKG_NAME=$(NAME)-$(VERSION)
@@ -12,14 +12,13 @@ PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
 SIG=$(PKG_DIR)/$(PKG_NAME).asc
 
 PREFIX?=/usr/local
-SHARE_DIR=$(PREFIX)/share/chgems
 DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
 
 pkg:
 	mkdir -p $(PKG_DIR)
 
-$(PKG): pkg $(FILES)
-	git archive --output=$(PKG) --prefix=$(PKG_NAME)/ master
+$(PKG): pkg
+	git archive --output=$(PKG) --prefix=$(PKG_NAME)/ HEAD
 
 build: $(PKG)
 
@@ -32,6 +31,10 @@ clean:
 	rm -f $(PKG) $(SIG)
 
 all: $(PKG) $(SIG)
+
+test:
+	SHELL=`which bash` ./test/runner
+	SHELL=`which zsh` ./test/runner
 
 tag:
 	git push
@@ -49,3 +52,5 @@ install:
 uninstall:
 	for file in $(INSTALL_FILES); do rm -f $(PREFIX)/$$file; done
 	rm -rf $(DOC_DIR)
+
+.PHONY: build sign clean test tag release install uninstall all
