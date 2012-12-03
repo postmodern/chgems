@@ -38,7 +38,7 @@ cd "$root"
 if [[ -n "${command[@]}" ]]; then
 	eval $command
 else
-	echo "Entering $root ..."
+	echo "Entering $root with gems in .gem/$ruby_engine/$ruby_version/ ..."
 	$SHELL
 	echo "Leaving $root ..."
 fi
