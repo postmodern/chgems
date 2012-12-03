@@ -2,8 +2,6 @@
 
 [[ -n "$ZSH_VERSION" ]] && setopt shwordsplit
 
-. ./share/chgems/chgems.sh
-
 eval `ruby - <<EOF
 require 'rubygems'
 puts "TEST_RUBY_ENGINE=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'}"
@@ -15,7 +13,7 @@ TEST_DIR="$PWD/test"
 TEST_NAME=$(basename $TEST_DIR)
 TEST_GEM_DIR="$TEST_DIR/.gem/$TEST_RUBY_ENGINE/$TEST_RUBY_VERSION"
 
-PS1="test$"
+PATH="$PWD/bin:$PATH"
 
 setUp() { return; }
 tearDown() { return; }

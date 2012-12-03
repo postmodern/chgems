@@ -86,13 +86,4 @@ function test_chgems_GEM_PATH()
 		     "$expected" "$new_gem_path"
 }
 
-function test_chgems_PS1()
-{
-	local expected="$TEST_NAME> $PS1"
-	local new_ps1=$(chgems "$TEST_DIR" 'echo -n $PS1')
-
-	assertEquals "did not prepend the gem directory name to PS1" \
-		     "$expected" "$new_ps1"
-}
-
 SHUNIT_PARENT=$0 . /usr/share/shunit2/shunit2

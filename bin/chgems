@@ -1,0 +1,43 @@
+#!/bin/bash
+
+case "$1" in
+	-h|--help)
+		echo "usage: chgems [ROOT [COMMAND [ARGS]...]]"
+		exit
+		;;
+esac
+
+if [[ -n "$1" ]]; then
+	root=$(readlink -f "$1")
+	shift && command=$@
+else
+	root="$PWD"
+	command=""
+fi
+
+if [[ ! -d "$root" ]]; then
+	echo "chgems: cannot use $root as a gem dir: No such directory" >&2
+	exit 1
+fi
+
+eval `ruby - <<EOF
+require 'rubygems'
+puts "ruby_engine=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'}"
+puts "ruby_version=#{RUBY_VERSION}"
+puts "gem_path=\"#{Gem.path.join(':')}\""
+EOF`
+
+gem_dir="$root/.gem/$ruby_engine/$ruby_version"
+
+cd "$root"
+export PATH="$gem_dir/bin:$PATH"
+export GEM_HOME="$gem_dir"
+export GEM_PATH="$gem_dir:$gem_path"
+
+if [[ -n "${command[@]}" ]]; then
+	eval $command
+else
+	echo "Entering $root ..."
+	$SHELL
+	echo "Leaving $root ..."
+fi
