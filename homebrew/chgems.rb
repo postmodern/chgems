@@ -11,14 +11,4 @@ class Chgems < Formula
     system 'make', 'install', "PREFIX=#{prefix}"
   end
 
-  def caveats; <<-EOS.undent
-    Add chgems to ~/.bashrc or ~/.profile:
-
-      . #{prefix}/share/chgems/chgems.sh
-
-    For system-wide installation, add the above text /etc/profile.
-
-    EOS
-  end
-
 end
