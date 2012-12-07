@@ -1,3 +1,18 @@
+### 0.3.0 / 2012-12-06
+
+* `chgems` is now an executable. **Please remove the following:**
+  * `/etc/profile.d/chgems.sh` symlink.
+  * `. /usr/local/share/chgems/chgems.sh` from `~/.profile`, `~/.bashrc`
+    or `~/.zshrc`.
+* No longer override `$PS1`. This annoys users and does not work with [zsh].
+* Print entering and exiting messages when spawning a sub-shell.
+* Forgot to add the MIT license.
+
+#### Makefile
+
+* Fixed `make install` to run on FreeBSD / OpenBSD.
+* No longer override `PREFIX`.
+
 ### 0.2.4 / 2012-11-19
 
 * Updated the Makefile to be compatible with the [dash] shell.
