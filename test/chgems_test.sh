@@ -86,4 +86,4 @@ function test_chgems_GEM_PATH()
 		     "$expected" "$new_gem_path"
 }
 
-SHUNIT_PARENT=$0 . /usr/share/shunit2/shunit2
+SHUNIT_PARENT=$0 . $SHUNIT2
