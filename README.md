@@ -29,7 +29,7 @@ All releases are [PGP] signed for security. Instructions on how to import my
 PGP key can be found on my [blog][1]. To verify that a release was not tampered 
 with:
 
-    wget https://github.com/downloads/postmodern/chgem/chgems-0.3.0.tar.gz.asc
+    wget https://raw.github.com/postmodern/chgems/master/pkg/chgems-0.3.0.tar.gz.asc
     gpg --verify chgems-0.3.0.tar.gz.asc chgems-0.3.0.tar.gz
 
 ### Homebrew
