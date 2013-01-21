@@ -18,7 +18,7 @@
 
 ## Install
 
-    wget https://github.com/downloads/postmodern/chgems/chgems-0.3.0.tar.gz
+    wget -O chgems-0.3.0.tar.gz https://github.com/postmodern/chgems/archive/v0.3.0.tar.gz
     tar -xzvf chgems-0.3.0.tar.gz
     cd chgems-0.3.0/
     make install
