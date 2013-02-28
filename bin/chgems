@@ -20,6 +20,8 @@ if [[ ! -d "$root" ]]; then
 	exit 1
 fi
 
+cd "$root"
+
 eval `ruby - <<EOF
 require 'rubygems'
 puts "ruby_engine=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'}"
@@ -32,8 +34,6 @@ gem_dir="$root/.gem/$ruby_engine/$ruby_version"
 export PATH="$gem_dir/bin:$PATH"
 export GEM_HOME="$gem_dir"
 export GEM_PATH="$gem_dir:$gem_path"
-
-cd "$root"
 
 if [[ -n "${command[@]}" ]]; then
 	eval $command
