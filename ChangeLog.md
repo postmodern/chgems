@@ -1,3 +1,9 @@
+### 0.3.1 / 2013-05-09
+
+* `cd` into the root directory before running ruby. This will activate any
+  `cd`/`PROMPT_COMMAND` hooks.
+* Use `$PWD` instead of `readlink -f`, which is not supported on OSX.
+
 ### 0.3.0 / 2012-12-06
 
 * `chgems` is now an executable. **Please remove the following:**
