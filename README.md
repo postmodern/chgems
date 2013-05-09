@@ -18,9 +18,9 @@
 
 ## Install
 
-    wget -O chgems-0.3.0.tar.gz https://github.com/postmodern/chgems/archive/v0.3.0.tar.gz
-    tar -xzvf chgems-0.3.0.tar.gz
-    cd chgems-0.3.0/
+    wget -O chgems-0.3.1.tar.gz https://github.com/postmodern/chgems/archive/v0.3.1.tar.gz
+    tar -xzvf chgems-0.3.1.tar.gz
+    cd chgems-0.3.1/
     make install
 
 ### PGP
@@ -29,8 +29,8 @@ All releases are [PGP] signed for security. Instructions on how to import my
 PGP key can be found on my [blog][1]. To verify that a release was not tampered 
 with:
 
-    wget https://raw.github.com/postmodern/chgems/master/pkg/chgems-0.3.0.tar.gz.asc
-    gpg --verify chgems-0.3.0.tar.gz.asc chgems-0.3.0.tar.gz
+    wget https://raw.github.com/postmodern/chgems/master/pkg/chgems-0.3.1.tar.gz.asc
+    gpg --verify chgems-0.3.1.tar.gz.asc chgems-0.3.1.tar.gz
 
 ### Homebrew
 
