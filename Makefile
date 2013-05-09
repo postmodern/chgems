@@ -22,10 +22,14 @@ $(PKG): pkg
 
 build: $(PKG)
 
-$(SIG): $(PKG)
+sign: $(PKG)
 	gpg --sign --detach-sign --armor $(PKG)
+	git add $(PKG).asc
+	git commit $(PKG).asc -m "Added PGP signature for v$(VERSION)"
+	git push
 
-sign: $(SIG)
+verify: $(PKG) $(SIG)
+	gpg --verify $(SIG) $(PKG)
 
 clean:
 	rm -f $(PKG) $(SIG)
