@@ -3,7 +3,7 @@ require 'formula'
 class Chgems < Formula
 
   homepage 'https://github.com/postmodern/chgems#readme'
-  url 'https://github.com/downloads/postmodern/chgems/chgems-0.3.1.tar.gz'
+  url 'https://github.com/postmodern/chgems/archive/v0.3.1.tar.gz'
   sha1 '742f1d12e85d93f286472425618fceba3e01f67c'
   head 'https://github.com/postmodern/chgems.git'
 
