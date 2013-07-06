@@ -22,6 +22,9 @@ $(PKG): pkg
 
 build: $(PKG)
 
+download: pkg
+	wget -O $(PKG) $(URL)/archive/v$(VERSION).tar.gz
+
 $(SIG): $(PKG)
 	gpg --sign --detach-sign --armor $(PKG)
 	git add $(SIG)
@@ -47,7 +50,7 @@ tag:
 	git tag -s -m "Tagging $(VERSION)" v$(VERSION)
 	git push --tags
 
-release: $(PKG) $(SIG) tag
+release: tag download sign
 
 install:
 	for dir in $(INSTALL_DIRS); do install -d $(PREFIX)/$$dir; done
@@ -59,4 +62,4 @@ uninstall:
 	for file in $(INSTALL_FILES); do rm -f $(PREFIX)/$$file; done
 	rm -rf $(DOC_DIR)
 
-.PHONY: build sign clean test tag release install uninstall all
+.PHONY: build download sign verify clean test tag release install uninstall all
