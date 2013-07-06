@@ -1,5 +1,7 @@
 NAME=chgems
 VERSION=0.3.2
+AUTHOR=postmodern
+URL=https://github.com/$(AUTHOR)/$(NAME)
 
 DIRS=etc lib bin sbin share
 INSTALL_DIRS=`find $(DIRS) -type d 2>/dev/null`
