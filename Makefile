@@ -9,7 +9,7 @@ DOC_FILES=*.md *.txt
 PKG_DIR=pkg
 PKG_NAME=$(NAME)-$(VERSION)
 PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
-SIG=$(PKG).asc
+SIG=$(PKG_DIR)/$(PKG).asc
 
 PREFIX?=/usr/local
 DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
@@ -24,8 +24,8 @@ build: $(PKG)
 
 $(SIG): $(PKG)
 	gpg --sign --detach-sign --armor $(PKG)
-	git add $(PKG).asc
-	git commit $(PKG).asc -m "Added PGP signature for v$(VERSION)"
+	git add $(SIG)
+	git commit $(SIG) -m "Added PGP signature for v$(VERSION)"
 	git push
 
 sign: $(SIG)
