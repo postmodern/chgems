@@ -1,3 +1,7 @@
+### 0.3.2 / 2013-07-05
+
+* Explicitly run `chgems` under `bash`, to avoid running under `dash`.
+
 ### 0.3.1 / 2013-05-09
 
 * `cd` into the root directory before running ruby. This will activate any
