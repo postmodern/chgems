@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
+chgems_version="0.3.3"
+
 case "$1" in
+	-V|--version)
+		echo "chgems $chgems_version"
+		exit
+		;;
 	-h|--help)
 		echo "usage: chgems [ROOT [COMMAND [ARGS]...]]"
 		exit
