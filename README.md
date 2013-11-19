@@ -10,7 +10,6 @@
   user / system installed gems.
   * Makes `bundle exec` obsolete.
 * Runs a sub-shell or another command.
-* Modifies the shell prompt, to remind the developer they are in a gems root.
 * Plays nicely with [chruby], [rbenv] and [rbfu].
 * Supports [bash] and [zsh].
 * Small (~50 LOC).
@@ -44,7 +43,8 @@ chgems can also be installed with [homebrew]:
 
     $ cd ~/project
     $ chgems
-    project> $ gem env
+    Entering /home/hal/project with gems in .gem/ruby/1.9.3/ ...
+    $ gem env
     RubyGems Environment:
       - RUBYGEMS VERSION: 1.8.24
       - RUBY VERSION: 1.9.3 (2012-04-20 patchlevel 194) [x86_64-linux]
