@@ -22,6 +22,12 @@ pkg:
 $(PKG): pkg
 	git archive --output=$(PKG) --prefix=$(PKG_NAME)/ HEAD
 
+share/man/man1/chgems.1: doc/man/chgems.1.md
+	kramdown-man doc/man/chgems.1.md > share/man/man1/chgems.1
+
+man: share/man/man1/chgems.1
+	git commit -m "Updated the man pages" doc/man/chgems.1.md share/man/man1/chgems.1
+
 build: $(PKG)
 
 download: pkg
@@ -64,4 +70,4 @@ uninstall:
 	for file in $(INSTALL_FILES); do rm -f $(PREFIX)/$$file; done
 	rm -rf $(DOC_DIR)
 
-.PHONY: build download sign verify clean test tag release install uninstall all
+.PHONY: build man download sign verify clean test tag release install uninstall all
