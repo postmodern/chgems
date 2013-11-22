@@ -68,10 +68,10 @@ chgems into a directory, run a command and return:
 *GEM_HOME*
 	Default repository location for gem installation. Set to isolate installed gems to the project directory.
     
-*$GEM_PATH*
+*GEM_PATH*
 	A colon-separated list of gem repository directories.
 
-*$PATH*
+*PATH*
 	Updates the PATH environment variable providing access to both project gems and user / system installed gems.
 
 ## AUTHOR
