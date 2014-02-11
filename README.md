@@ -21,6 +21,9 @@
     tar -xzvf chgems-0.3.2.tar.gz
     cd chgems-0.3.2/
     sudo make install
+    
+    # if you want to install in $HOME
+    PREFIX=$HOME make install
 
 ### PGP
 
