@@ -86,6 +86,7 @@ Cleaning up a `chgems` project:
 * [gs](https://github.com/inkel/gs#readme)
 * [gst](https://github.com/tonchis/gst#readme)
 * [ohmygems](http://blog.zenspider.com/blog/2012/09/ohmygems.html)
+* [renv](https://github.com/fnichol/renv)
 
 ## Credits
 
