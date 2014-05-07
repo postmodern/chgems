@@ -83,10 +83,10 @@ Cleaning up a `chgems` project:
 
 ## Caveat
 
-If you load a Ruby switcher/manager in `~/.bashrc` or `~/.zshrc`, it will
-override the `$GEM_HOME` and `$GEM_PATH` set by chgems. The workaround to this
-conflict is to simply load the Ruby switcher/manager in `~/.bash_profile` or
-`~/.zprofile`.
+If you load a Ruby switcher/manager in `~/.bashrc` or `~/.zshrc` and a
+`.ruby-version` file is present, it will override the `$GEM_HOME` and
+`$GEM_PATH` set by chgems. The workaround to this conflict is to simply load
+the Ruby switcher/manager in `~/.bash_profile` or `~/.zprofile`.
 
 ## Alternatives
 
