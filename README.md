@@ -1,5 +1,7 @@
 # chgems
 
+**DEPRECATED:** chgems has been deprecated in favor of [gem_home].
+
 `chroot` for RubyGems.
 
 ## Features
@@ -99,6 +101,7 @@ the Ruby switcher/manager in `~/.bash_profile` or `~/.zprofile`.
 
 * [mpapis](https://github.com/mpapis) for reviewing the code.
 
+[gem_home]: https://github.com/postmodern/gem_home#readme
 [rbenv]: https://github.com/sstephenson/rbenv#readme
 [rbfu]: https://github.com/hmans/rbfu#readme
 [chruby]: https://github.com/postmodern/chruby#readme
