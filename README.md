@@ -1,6 +1,6 @@
-# chgems
+# DEPRECATED: use [gem_home] instead
 
-**DEPRECATED:** chgems has been deprecated in favor of [gem_home].
+# chgems
 
 `chroot` for RubyGems.
 
